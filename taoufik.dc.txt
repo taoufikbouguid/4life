@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق الذكريات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>تطبيق الذكريات</h1>
+    </header>
+    <section>
+        <form id="memoriesForm">
+            <label for="yourName">اسمك:</label>
+            <input type="text" id="yourName" name="yourName" required><br>
+            <label for="partnerName">اسم الشريك:</label>
+            <input type="text" id="partnerName" name="partnerName" required><br>
+            <label for="memories">ذكرياتك مع الشريك:</label><br>
+            <textarea id="memories" name="memories" required></textarea><br>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 تطبيق الذكريات</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

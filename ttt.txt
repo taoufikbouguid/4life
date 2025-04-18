@@ -1,0 +1,31 @@
+document.getElementById('memoriesForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const yourName = document.getElementById('yourName').value;
+    const partnerName = document.getElementById('partnerName').value;
+    const memories = document.getElementById('memories').value;
+
+    // حفظ البيانات في localStorage
+    localStorage.setItem('yourName', yourName);
+    localStorage.setItem('partnerName', partnerName);
+    localStorage.setItem('memories', memories);
+
+    // عرض البيانات للمستخدم
+    alert(`شكراً لك، ${yourName}!\nذكرياتك مع ${partnerName}: ${memories}`);
+    
+    // إعادة تحميل الصفحة (اختياري) لعرض البيانات المحفوظة
+    location.reload();
+});
+
+// عند تحميل الصفحة، نقوم بتحميل البيانات المخزنة في localStorage
+window.onload = function() {
+    if (localStorage.getItem('yourName') && localStorage.getItem('partnerName') && localStorage.getItem('memories')) {
+        const yourName = localStorage.getItem('yourName');
+        const partnerName = localStorage.getItem('partnerName');
+        const memories = localStorage.getItem('memories');
+        
+        // عرض البيانات المحفوظة للمستخدم
+        alert(`الذكريات المحفوظة:\n${yourName} مع ${partnerName}: ${memories}`);
+    }
+}
+
